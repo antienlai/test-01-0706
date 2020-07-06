@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Homework1</title>
+</head>
+<body>
+	<script>
+		
+		let student1={
+			name:'Alex',
+			age:18,
+			eng_score:87,
+			math_score:90,
+		}
+		let student2={
+			name:'Bill',
+			age:19,
+			eng_score:95,
+			math_score:98,
+		}
+		let student3={
+			name:'Cook',
+			age:17,
+			eng_score:100,
+			math_score:73,
+		}
+
+		let students=[student1 , student2 , student3 ]
+		
+		let eng_scoreAverage=0;
+		let eng_scoreTotal=0;
+		let math_scoreAverage=0;
+		let math_scoreTotal=0;
+
+		
+		for(i=0;i<students.length;i++){
+			//console.log(students.length)
+			let eng_score=students[i]['eng_score'];
+			
+			eng_scoreTotal += eng_score;
+			console.log(eng_scoreTotal)
+			eng_scoreAverage=eng_scoreTotal/students.length;			
+		}
+		for(r=0;r<students.length;r++){
+			let math_score=students[r]["math_score"];
+			math_scoreTotal += math_score;
+			math_scoreAverage=math_scoreTotal/students.length;
+		}
+		document.write(`英文平均：${eng_scoreAverage}分 <br>`);
+		document.write(`英文平均：${math_scoreAverage}分`);
+	</script>
+	
+</body>
+</html>

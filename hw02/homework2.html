@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>homework2</title>
+	<style>
+		.circle{
+			width: 30px;
+			height: 30px;
+			background-color: burlywood;
+			border-radius: 50%;
+			padding:10px 10px;
+			margin: 20px auto;
+			text-align: center;
+			color:red;
+			transition:1s;
+		}
+		.circle:hover{
+			transform:scale(1.5);
+		}
+	</style>
+</head>
+<body>
+	<div id="circle"></div>
+
+	<script>
+
+
+		let flag=false;
+		for(let i=2; i<=100; i++){
+			for(let j=2; j<i; j++){
+				if (i%j==0){
+					flag=true;
+				}
+			}if (flag==false){
+				//document.write(i);
+				var div=document.getElementById('circle');
+				var txt=document.createElement('p');
+				txt.innerHTML=i;
+				txt.className='circle';
+				div.appendChild(txt);
+				//let p = document.querySelector('p'); 
+				//p.style.color = '#7878ff';
+			}else {
+			flag=false;}
+		} 
+	</script>
+</body>
+</html>
